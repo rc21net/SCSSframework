@@ -1,12 +1,20 @@
 {
-	"name": "SCSSframework",
-	"version": "1.0.0",
-	"scripts": {},
-	"keywords": [],
-	"author": "Roman Cz",
-	"license": "MIT",
-	"dependencies": {
-	},
-	"devDependencies": {
-	}
+  "name": "scss-framework",
+  "version": "1.0.0",
+  "description": "SCSS framework",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rc21net/SCSSframework.git"
+  },
+  "keywords": [
+    "scss"
+  ],
+  "author": "rc21 <rc21mail@gmail.com> (http://www.rc21net.ru)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rc21net/SCSSframework/issues"
+  },
+  "homepage": "https://github.com/rc21net/SCSSframework#readme"
 }
