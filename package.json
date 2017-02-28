@@ -1,0 +1,12 @@
+{
+	"name": "SCSSframework",
+	"version": "1.0.0",
+	"scripts": {},
+	"keywords": [],
+	"author": "Roman Cz",
+	"license": "MIT",
+	"dependencies": {
+	},
+	"devDependencies": {
+	}
+}
