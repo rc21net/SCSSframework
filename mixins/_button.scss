@@ -1,0 +1,44 @@
+// варианты расцветок
+@mixin buttonState($colors, $state) {
+	$color: map_get($colors, 'color');
+	$background: map_get($colors, 'background');
+	$border: map_get($colors, 'border');
+
+	color: map-get($color, $state) !important;
+	background-color: map-get($background, $state) !important;
+	border-color: map-get($border, $state) !important;
+}
+@mixin buttonVariant($colors) {
+	@include buttonState($colors, 'default');
+
+	&:hover,
+	&:focus,
+	&.focus {
+		@include buttonState($colors, 'hover');
+	}
+	&:active,
+	&.active {
+		@include buttonState($colors, 'active');
+	}
+	&.disabled,
+	&[disabled] {
+		&,
+		&:hover,
+		&:focus,
+		&.focus,
+		&:active,
+		&.active {
+			@include buttonState($colors, 'default');
+		}
+	}
+}
+
+// варианты размеров
+@mixin buttonSize($height, $padding-horizontal, $font-size: $btn-font-size-base, $border-radius: $btn-border-radius-base, $border-size: $btn-border-size-base) {
+	height: $height !important;
+	line-height: $height - $border-size * 2 !important;
+	padding: 0 $padding-horizontal !important;
+	font-size: $font-size !important;
+	border: $border-size solid !important;
+	border-radius: $border-radius !important;
+}

@@ -1,0 +1,31 @@
+@mixin toggle($barColor, $barColorHover, $width, $height, $barHeight) {
+	$barMargin: ($height - $barHeight * 3) / 2;
+
+	$middleBarTop: $barHeight + $barMargin;
+	$middleBarBottom: $middleBarTop + $barHeight;
+	$bottomBarTop: $middleBarBottom + $barMargin;
+
+	display: inline-block;
+
+	&:after {
+		content: '';
+		display: block;
+		width: $width;
+		height: $height;
+		margin: 0 auto;
+		background-image: -webkit-linear-gradient(top, $barColor $barHeight, transparent $barHeight, transparent $middleBarTop, $barColor $middleBarTop, $barColor $middleBarBottom, transparent $middleBarBottom, transparent $bottomBarTop, $barColor $bottomBarTop);
+		background-image: -o-linear-gradient(top, $barColor $barHeight, transparent $barHeight, transparent $middleBarTop, $barColor $middleBarTop, $barColor $middleBarBottom, transparent $middleBarBottom, transparent $bottomBarTop, $barColor $bottomBarTop);
+		background-image: linear-gradient(to bottom, $barColor $barHeight, transparent $barHeight, transparent $middleBarTop, $barColor $middleBarTop, $barColor $middleBarBottom, transparent $middleBarBottom, transparent $bottomBarTop, $barColor $bottomBarTop);
+	}
+
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+		cursor: pointer;
+		&:after {
+			content: '';
+			background-image: -webkit-linear-gradient(top, $barColorHover $barHeight, transparent $barHeight, transparent $middleBarTop, $barColorHover $middleBarTop, $barColorHover $middleBarBottom, transparent $middleBarBottom, transparent $bottomBarTop, $barColorHover $bottomBarTop);
+			background-image: -o-linear-gradient(top, $barColorHover $barHeight, transparent $barHeight, transparent $middleBarTop, $barColorHover $middleBarTop, $barColorHover $middleBarBottom, transparent $middleBarBottom, transparent $bottomBarTop, $barColorHover $bottomBarTop);
+			background-image: linear-gradient(to bottom, $barColorHover $barHeight, transparent $barHeight, transparent $middleBarTop, $barColorHover $middleBarTop, $barColorHover $middleBarBottom, transparent $middleBarBottom, transparent $bottomBarTop, $barColorHover $bottomBarTop);
+		}
+	}
+}

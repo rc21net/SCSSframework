@@ -1,0 +1,37 @@
+$btn-border-radius-base: 40px;
+$btn-border-size-base: 3px;
+$btn-font-size-base: 17px;
+
+$btn-transition: all 0.1s ease-out 0.05s;
+$button-colors: (
+		orange: (
+				color: (default: $white, hover: $white, active: $white),
+				background: (default: $orange, hover: $orangeDarker, active: $orange),
+				border: (default: $orange, hover: $orangeDarker, active: $orange)
+		),
+		blue: (
+				color: (default: $white, hover: $white, active: $white),
+				background: (default: $blueDark, hover: $blueDarker, active: $blueDark),
+				border: (default: $blueDark, hover: $blueDarker, active: $blueDark)
+		),
+		green: (
+				color: (default: $white, hover: $white, active: $white),
+				background: (default: $greenLight, hover: $greenDark, active: $greenLight),
+				border: (default: $greenLight, hover: $greenDark, active: $greenLight)
+		),
+		trans-orange: (
+				color: (default: $orangeDark, hover: $white, active: $white),
+				background: (default: $white, hover: $orangeDarker, active: $orange),
+				border: (default: $orange, hover: $orangeDarker, active: $orange)
+		),
+		trans-green: (
+				color: (default: $white, hover: $greenDark, active: $greenDark),
+				background: (default: transparent, hover: $white, active: rgba(255,255,255,.8)),
+				border: (default: $white, hover: $white, active: rgba(255,255,255,.0))
+		),
+		disable: (
+				color: (default: $white, hover: $white, active: $white),
+				background: (default: $grayBgXLighter, hover: $grayBgXLighter, active: $grayBgXLighter),
+				border: (default: $grayBgXLighter, hover: $grayBgXLighter, active: $grayBgXLighter)
+		)
+);

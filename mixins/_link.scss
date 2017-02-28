@@ -1,0 +1,7 @@
+/* Include color and border-bottom-color in hover */
+@mixin link-color ($color) {
+	color: $color;
+	&:hover {
+		border-bottom-color: $color;
+	}
+}

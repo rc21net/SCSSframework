@@ -1,0 +1,23 @@
+@mixin list-bar {
+	margin: 0;
+	padding: 0;
+	@include clearfix();
+	li {
+		float: left;
+		display: block;
+		position: relative;
+	}
+}
+@mixin separated-list-bar {
+	li {
+		border-right: solid 1px;
+		margin-right: 11px;
+		padding-right: 11px;
+		&:last-child,
+		&:only-child {
+			border-right: none;
+			margin-right: 0;
+			padding-right: 0;
+		}
+	}
+}

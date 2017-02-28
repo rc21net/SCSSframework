@@ -1,0 +1,368 @@
+$fonts: (
+		rr-33-3d: (
+				font-family: $normalFont,
+				font-size: 33px,
+				color: $grayFontDark,
+				line-height: baseSizeX(3)
+		),
+		rr-22-3d: (
+				font-family: $normalFont,
+				font-size: 22px,
+				color: $grayFontDark,
+				line-height: baseSizeX(3)
+		),
+		"rr-22/22-3d": (
+				font-family: $normalFont,
+				font-size: 22px,
+				color: $grayFontDark,
+				line-height: baseSizeX(2)
+		),
+		rr-18-3d: (
+				font-family: $normalFont,
+				font-size: 18px,
+				color: $grayFontDark,
+				line-height: baseSizeX(2)
+		),
+		rr-17-3d: (
+				font-family: $normalFont,
+				font-size: 17px,
+				color: $grayFontDark,
+				line-height: baseSizeX(2)
+		),
+		rr-15-3d: (
+				font-family: $normalFont,
+				font-size: 15px,
+				color: $grayFontDark,
+				line-height: baseSizeX(2)
+		),
+		rr-14-3d: (
+				font-family: $normalFont,
+				font-size: 14px,
+				color: $grayFontDark,
+				line-height: baseSizeX(2)
+		),
+		rr-13-44: (
+				font-family: $normalFont,
+				font-size: 13px,
+				color: $grayFontBase,
+				line-height: baseSizeX(2)
+		),
+		rr-14-44: (
+				font-family: $normalFont,
+				font-size: 14px,
+				color: $grayFontBase,
+				line-height: baseSizeX(2)
+		),
+		rr-14-44-cap: (
+				font-family: $normalFont,
+				font-size: 14px,
+				color: $grayFontBase,
+				line-height: baseSizeX(2),
+				text-transform: uppercase
+		),
+		rr-15-44: (
+				font-family: $normalFont,
+				font-size: 15px,
+				color: $grayFontBase,
+				line-height: baseSizeX(2)
+		),
+		rr-16-44: (
+				font-family: $normalFont,
+				font-size: 16px,
+				color: $grayFontBase,
+				line-height: baseSizeX(2)
+		),
+		rm-16-44: (
+				font-family: $normalFont,
+				font-size: 16px,
+				color: $grayFontBase,
+				line-height: baseSizeX(2),
+				font-weight: 500
+		),
+		rr-18-44: (
+				font-family: $normalFont,
+				font-size: 18px,
+				color: $grayFontBase,
+				line-height: baseSizeX(2)
+		),
+		rr-19-44: (
+				font-family: $normalFont,
+				font-size: 19px,
+				color: $grayFontBase,
+				line-height: baseSizeX(2)
+		),
+		rr-19-3-44: (
+				font-family: $normalFont,
+				font-size: 19px,
+				color: $grayFontBase,
+				line-height: 29px
+		),
+		rr-22-44: (
+				font-family: $normalFont,
+				font-size: 22px,
+				color: $grayFontBase,
+				line-height: baseSizeX(2)
+		),
+		rl-22-44: (
+				font-family: $normalFont,
+				font-size: 22px,
+				color: $grayFontBase,
+				line-height: baseSizeX(2),
+				font-weight: 300
+		),
+		rr-25-44: (
+				font-family: $normalFont,
+				font-size: 25px,
+				color: $grayFontBase,
+				line-height: baseSizeX(3)
+		),
+		rl-25-44: (
+				font-family: $normalFont,
+				font-size: 25px,
+				color: $grayFontBase,
+				line-height: baseSizeX(3),
+				font-weight: 300
+		),
+		rr-33-44: (
+				font-family: $normalFont,
+				font-size: 33px,
+				color: $grayFontBase,
+				line-height: baseSizeX(4)
+		),
+		rr-33-3-44: (
+				font-family: $normalFont,
+				font-size: 33px,
+				color: $grayFontBase,
+				line-height: baseSizeX(3)
+		),
+		rr-25-50: (
+				font-family: $normalFont,
+				font-size: 25px,
+				color: $grayFontLight,
+				line-height: baseSizeX(3)
+		),
+		rr-27-50: (
+				font-family: $normalFont,
+				font-size: 27px,
+				color: $grayFontLight,
+				line-height: baseSizeX(3)
+		),
+		ri-21-50: (
+				font-family: $normalFont,
+				font-size: 21px,
+				color: $grayFontLight,
+				line-height: baseSizeX(2),
+				font-style: italic
+		),
+		rl-35-50: (
+				font-family: $normalFont,
+				font-size: 35px,
+				color: $grayFontLight,
+				line-height: baseSizeX(4),
+				font-weight: 300
+		),
+		rl-53-50: (
+				font-family: $normalFont,
+				font-size: 53px,
+				color: $grayFontLight,
+				line-height: baseSizeX(5),
+				font-weight: 300
+		),
+		rr-14-55: (
+				font-family: $normalFont,
+				font-size: 14px,
+				color: $grayFontLighter,
+				line-height: baseSizeX(2)
+		),
+		rr-14-55-cap: (
+				font-family: $normalFont,
+				font-size: 14px,
+				color: $grayFontLighter,
+				line-height: baseSizeX(2),
+				text-transform: uppercase
+		),
+		rr-16-55-cap: (
+				font-family: $normalFont,
+				font-size: 16px,
+				color: $grayFontLighter,
+				line-height: baseSizeX(2),
+				text-transform: uppercase
+		),
+		rr-22-2-55: (
+				font-family: $normalFont,
+				font-size: 22px,
+				color: $grayFontLighter,
+				line-height: baseSizeX(2)
+		),
+		rl-22-2-55: (
+				font-family: $normalFont,
+				font-size: 22px,
+				color: $grayFontLighter,
+				line-height: baseSizeX(2),
+				font-weight: 300
+		),
+		rr-25-55: (
+				font-family: $normalFont,
+				font-size: 25px,
+				color: $grayFontLighter,
+				line-height: baseSizeX(3)
+		),
+		rl-35-55: (
+				font-family: $normalFont,
+				font-size: 35px,
+				color: $grayFontLighter,
+				line-height: baseSizeX(4),
+				font-weight: 300
+		),
+		rr-11-1-88: (
+				font-family: $normalFont,
+				font-size: 11px,
+				color: $grayFontXLighter,
+				line-height: baseSizeX(1)
+		),
+		rr-13-88: (
+				font-family: $normalFont,
+				font-size: 13px,
+				color: $grayFontXLighter,
+				line-height: baseSizeX(2)
+		),
+		rr-14-88: (
+				font-family: $normalFont,
+				font-size: 14px,
+				color: $grayFontXLighter,
+				line-height: baseSizeX(2)
+		),
+		rr-13-88-cap: (
+				font-family: $normalFont,
+				font-size: 13px,
+				color: $grayFontXLighter,
+				line-height: baseSizeX(2),
+				text-transform: uppercase
+		),
+		rr-14-ff-cap: (
+				font-family: $normalFont,
+				font-size: 14px,
+				color: $white,
+				line-height: baseSizeX(2),
+				text-transform: uppercase
+		),
+		rl-15-ff-cap: (
+				font-family: $normalFont,
+				font-size: 15px,
+				color: $white,
+				line-height: baseSizeX(2),
+				text-transform: uppercase,
+				font-weight: 300
+		),
+		rr-16-ff: (
+				font-family: $normalFont,
+				font-size: 16px,
+				color: $white,
+				line-height: baseSizeX(2)
+		),
+		rr-16-ff-cap: (
+				font-family: $normalFont,
+				font-size: 16px,
+				color: $white,
+				line-height: baseSizeX(2),
+				text-transform: uppercase
+		),
+		rr-17-ff: (
+				font-family: $normalFont,
+				font-size: 17px,
+				color: $white,
+				line-height: baseSizeX(2)
+		),
+		rl-18-ff: (
+				font-family: $normalFont,
+				font-size: 18px,
+				color: $white,
+				line-height: baseSizeX(2),
+				font-weight: 300
+		),
+		rm-18-ff: (
+				font-family: $normalFont,
+				font-size: 18px,
+				color: $white,
+				line-height: baseSizeX(2),
+				font-weight: 500
+		),
+		rr-18-ff: (
+				font-family: $normalFont,
+				font-size: 18px,
+				color: $white,
+				line-height: baseSizeX(2)
+		),
+		rr-19-ff: (
+				font-family: $normalFont,
+				font-size: 19px,
+				color: $white,
+				line-height: baseSizeX(2)
+		),
+		rr-22-ff: (
+				font-family: $normalFont,
+				font-size: 22px,
+				color: $white,
+				line-height: baseSizeX(2)
+		),
+		rr-22-ff-cap: (
+				font-family: $normalFont,
+				font-size: 22px,
+				color: $white,
+				line-height: baseSizeX(3),
+				text-transform: uppercase
+		),
+		rr-25-ff: (
+				font-family: $normalFont,
+				font-size: 25px,
+				color: $white,
+				line-height: baseSizeX(3)
+		),
+		rl-35-ff: (
+				font-family: $normalFont,
+				font-size: 35px,
+				color: $white,
+				line-height: baseSizeX(4),
+				font-weight: 300
+		),
+		rl-41-ff: (
+				font-family: $normalFont,
+				font-size: 41px,
+				color: $white,
+				line-height: baseSizeX(4),
+				font-weight: 300
+		),
+		rt-80-ff: (
+				font-family: $normalFont,
+				font-size: 80px,
+				color: $white,
+				line-height: baseSizeX(8),
+				font-weight: 100
+		),
+		rr-14-ff5-cap: (
+				font-family: $normalFont,
+				font-size: 14px,
+				color: $whiteHalfOpacity,
+				line-height: baseSizeX(2),
+				text-transform: uppercase
+		),
+		rr-22-ff3: (
+				font-family: $normalFont,
+				font-size: 22px,
+				color: rgba(255,255,255,.3),
+				line-height: baseSizeX(2)
+		),
+		rr-16-3-link: (
+				font-family: $normalFont,
+				font-size: 16px,
+				color: $linkFont,
+				line-height: baseSizeX(3)
+		),
+		rm-16-link: (
+				font-family: $normalFont,
+				font-size: 16px,
+				color: $linkFont,
+				line-height: baseSizeX(2),
+				font-weight: 500
+		)
+);
