@@ -1,0 +1,9 @@
+/************************
+ Кратные базовым размеры
+************************/
+
+$baseSize: 11px !default;
+
+@function baseSizeX($x: 1) {
+	@return $baseSize * $x;
+}

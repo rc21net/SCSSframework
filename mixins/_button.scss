@@ -1,5 +1,23 @@
-// варианты расцветок
-@mixin buttonState($colors, $state) {
+/*******************************************************************************
+Можно задать map со всеми цветами кнопок, например:
+$button-colors: (
+		colorName: (
+				color: (default: $white, hover: $white, active: $white),
+				background: (default: $orange, hover: $orange, active: $orange),
+				border: (default: $black, hover: $black, active: $black)
+		),
+		...
+);
+Потом запустить цикл:
+@each $color, $map in $button-colors {
+	.button-#{$color} {
+		@include buttonColor($map);
+	}
+}
+*******************************************************************************/
+
+// служебные
+@mixin _buttonState($colors, $state) {
 	$color: map_get($colors, 'color');
 	$background: map_get($colors, 'background');
 	$border: map_get($colors, 'border');
@@ -8,17 +26,46 @@
 	background-color: map-get($background, $state) !important;
 	border-color: map-get($border, $state) !important;
 }
-@mixin buttonVariant($colors) {
-	@include buttonState($colors, 'default');
+
+/** Общий стиль кнопок
+  */
+@mixin buttonType($font-face, $uppercase: false, $transition) {
+	display: inline-block;
+	box-sizing: border-box;
+	font-family: $font-face;
+	@if $uppercase {
+		text-transform: uppercase;
+	}
+	@include transition($transition);
+	&:hover {
+		text-decoration: none;
+		cursor: pointer;
+	}
+}
+
+
+//
+/** Варианты расцветок
+  *
+  * $colors - map, пример:
+  * $color: (
+  * 	color: (default: $white, hover: $white, active: $white),
+  * 	background: (default: $orange, hover: $orange, active: $orange),
+  * 	border: (default: $black, hover: $black, active: $black)
+  * );
+  *
+  */
+@mixin buttonColor($colors) {
+	@include _buttonState($colors, 'default');
 
 	&:hover,
 	&:focus,
 	&.focus {
-		@include buttonState($colors, 'hover');
+		@include _buttonState($colors, 'hover');
 	}
 	&:active,
 	&.active {
-		@include buttonState($colors, 'active');
+		@include _buttonState($colors, 'active');
 	}
 	&.disabled,
 	&[disabled] {
@@ -28,12 +75,13 @@
 		&.focus,
 		&:active,
 		&.active {
-			@include buttonState($colors, 'default');
+			@include _buttonState($colors, 'default');
 		}
 	}
 }
 
-// варианты размеров
+/** Варианты размеров
+  */
 @mixin buttonSize($height, $padding-horizontal, $font-size: $btn-font-size-base, $border-radius: $btn-border-radius-base, $border-size: $btn-border-size-base) {
 	height: $height !important;
 	line-height: $height - $border-size * 2 !important;

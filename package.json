@@ -1,9 +1,8 @@
 {
   "name": "scss-framework",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "SCSS framework",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rc21net/SCSSframework.git"
@@ -16,5 +15,7 @@
   "bugs": {
     "url": "https://github.com/rc21net/SCSSframework/issues"
   },
-  "homepage": "https://github.com/rc21net/SCSSframework#readme"
+  "homepage": "https://github.com/rc21net/SCSSframework#readme",
+  "devDependencies": {
+  }
 }

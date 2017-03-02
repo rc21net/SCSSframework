@@ -1,3 +1,5 @@
+// TODO: доработать, не очень удобно
+
 @function getPropertyOrNull($map, $propertyName) {
 	@if map_has_key($map, $propertyName) {
 		@return map_get($map, $propertyName);
@@ -7,6 +9,20 @@
 	}
 }
 
+$fonts: null !default;
+$rembase: 16 !default;
+/*
+Пример $fonts
+$fonts: (
+		rm-16-link: (
+				font-family: $normalFont,
+				font-size: 16px,
+				color: $linkFont,
+				line-height: baseSizeX(2),
+				font-weight: 500
+		)
+);
+*/
 @mixin font($fontMapName, $important: null) {
 	$fontMap: map_get($fonts, $fontMapName);
 

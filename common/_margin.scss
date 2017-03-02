@@ -1,0 +1,14 @@
+@for $i from 1 through 9 {
+	.margin-top-#{$i} {
+		margin-top: baseSizeX($i) !important;
+	}
+	.margin-bottom-#{$i} {
+		margin-bottom: baseSizeX($i) !important;
+	}
+	.margin-right-#{$i} {
+		margin-right: baseSizeX($i) !important;
+	}
+	.margin-left-#{$i} {
+		margin-left: baseSizeX($i) !important;
+	}
+}
