@@ -1,20 +1,19 @@
-/*******************************************************************************
-Можно задать map со всеми цветами кнопок, например:
-$button-colors: (
-		colorName: (
-				color: (default: $white, hover: $white, active: $white),
-				background: (default: $orange, hover: $orange, active: $orange),
-				border: (default: $black, hover: $black, active: $black)
-		),
-		...
-);
-Потом запустить цикл:
-@each $color, $map in $button-colors {
-	.button-#{$color} {
-		@include buttonColor($map);
-	}
-}
-*******************************************************************************/
+
+// Можно задать map со всеми цветами кнопок, например:
+// $button-colors: (
+// 		colorName: (
+// 				color: (default: $white, hover: $white, active: $white),
+// 				background: (default: $orange, hover: $orange, active: $orange),
+// 				border: (default: $black, hover: $black, active: $black)
+// 		),
+// 		...
+// );
+// Потом запустить цикл:
+// @each $color, $map in $button-colors {
+// 	.button-#{$color} {
+// 		@include buttonColor($map);
+// 	}
+// }
 
 // служебные
 @mixin _buttonState($colors, $state) {
@@ -27,8 +26,7 @@ $button-colors: (
 	border-color: map-get($border, $state) !important;
 }
 
-/** Общий стиль кнопок
-  */
+// Общий стиль кнопок
 @mixin buttonType($font-face, $uppercase: false, $transition: none) {
 	display: inline-block;
 	box-sizing: border-box;
@@ -43,18 +41,14 @@ $button-colors: (
 	}
 }
 
-
+// Варианты расцветок
 //
-/** Варианты расцветок
-  *
-  * $colors - map, пример:
-  * $color: (
-  * 	color: (default: $white, hover: $white, active: $white),
-  * 	background: (default: $orange, hover: $orange, active: $orange),
-  * 	border: (default: $black, hover: $black, active: $black)
-  * );
-  *
-  */
+// $colors - map, пример:
+// $color: (
+// 	color: (default: $white, hover: $white, active: $white),
+// 	background: (default: $orange, hover: $orange, active: $orange),
+// 	border: (default: $black, hover: $black, active: $black)
+// );
 @mixin buttonColor($colors) {
 	@include _buttonState($colors, 'default');
 
@@ -80,8 +74,7 @@ $button-colors: (
 	}
 }
 
-/** Варианты размеров
-  */
+// Варианты размеров
 @mixin buttonSize($height, $padding-horizontal, $font-size: $btn-font-size-base, $border-radius: $btn-border-radius-base, $border-size: $btn-border-size-base) {
 	height: $height !important;
 	line-height: $height - $border-size * 2 !important;
