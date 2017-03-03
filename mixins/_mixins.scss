@@ -1,4 +1,9 @@
-﻿@import "sprite";
+﻿@import "../variables/variables";
+
+@import "media";
+@import "clearfix";
+@import "baseSize";
+@import "sprite";
 @import "font";
 @import "size";
 @import "container";
@@ -8,7 +13,6 @@
 @import "transition";
 @import "caret";
 @import "hideText";
-@import "media";
 @import "button";
 @import "font-smoothing";
 @import "toggle";

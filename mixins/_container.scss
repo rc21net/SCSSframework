@@ -1,5 +1,3 @@
-$grid-gutter-width: 16px !default;
-
 @mixin container($gutter: $grid-gutter-width) {
 	margin-left: auto;
 	margin-right: auto;
@@ -11,4 +9,80 @@ $grid-gutter-width: 16px !default;
 	margin-right: 0;
 	padding-left: 0;
 	padding-right: 0;
+}
+
+@mixin container-sm-md-lg {
+	@include container;
+
+	@include tabletAndUp {
+		width: $container-sm;
+	}
+
+	@include desktopAndUp {
+		width: $container-md;
+	}
+
+	@include largeAndUp {
+		width: $container-lg;
+	}
+}
+
+@mixin container-sm {
+	@include container;
+
+	@include tabletAndUp {
+		width: $container-sm;
+	}
+}
+
+@mixin container-md {
+	@include container;
+
+	@include desktopAndUp {
+		width: $container-md;
+	}
+}
+
+@mixin container-lg {
+	@include container;
+
+	@include largeAndUp {
+		width: $container-lg;
+	}
+}
+
+@mixin container-sm-md {
+	@include container;
+
+	@include tabletAndUp {
+		width: $container-sm;
+	}
+
+	@include desktopAndUp {
+		width: $container-md;
+	}
+}
+
+@mixin container-sm-lg {
+	@include container;
+
+	@include tabletAndUp {
+		width: $container-sm;
+	}
+
+	@include largeAndUp {
+		width: $container-lg;
+	}
+}
+
+@mixin container-md-lg {
+	@include container;
+
+	@include desktopAndUp {
+		width: $container-md;
+	}
+
+	@include largeAndUp {
+		width: $container-lg;
+	}
 }
