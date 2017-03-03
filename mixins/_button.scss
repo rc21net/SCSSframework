@@ -29,7 +29,7 @@ $button-colors: (
 
 /** Общий стиль кнопок
   */
-@mixin buttonType($font-face, $uppercase: false, $transition) {
+@mixin buttonType($font-face, $uppercase: false, $transition: none) {
 	display: inline-block;
 	box-sizing: border-box;
 	font-family: $font-face;
