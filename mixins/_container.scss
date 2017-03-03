@@ -12,8 +12,6 @@
 }
 
 @mixin container-sm-md-lg {
-	@include container;
-
 	@include tabletAndUp {
 		width: $container-sm;
 	}
@@ -28,32 +26,24 @@
 }
 
 @mixin container-sm {
-	@include container;
-
 	@include tabletAndUp {
 		width: $container-sm;
 	}
 }
 
 @mixin container-md {
-	@include container;
-
 	@include desktopAndUp {
 		width: $container-md;
 	}
 }
 
 @mixin container-lg {
-	@include container;
-
 	@include largeAndUp {
 		width: $container-lg;
 	}
 }
 
 @mixin container-sm-md {
-	@include container;
-
 	@include tabletAndUp {
 		width: $container-sm;
 	}
@@ -64,8 +54,6 @@
 }
 
 @mixin container-sm-lg {
-	@include container;
-
 	@include tabletAndUp {
 		width: $container-sm;
 	}
@@ -76,8 +64,6 @@
 }
 
 @mixin container-md-lg {
-	@include container;
-
 	@include desktopAndUp {
 		width: $container-md;
 	}
