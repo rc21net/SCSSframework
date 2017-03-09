@@ -5,28 +5,28 @@
 	border: none;
 }
 
-@mixin caret-up($size, $color) {
+@mixin caret-up($size, $color: null) {
 	@include caret-base;
 	border-bottom: $size solid $color;
 	border-right: $size solid transparent;
 	border-left: $size solid transparent;
 }
 
-@mixin caret-down($size, $color) {
+@mixin caret-down($size, $color: null) {
 	@include caret-base;
 	border-top: $size solid $color;
 	border-right: $size solid transparent;
 	border-left: $size solid transparent;
 }
 
-@mixin caret-left($size, $color) {
+@mixin caret-left($size, $color: null) {
 	@include caret-base;
 	border-right: $size solid $color;
 	border-top: $size solid transparent;
 	border-bottom: $size solid transparent;
 }
 
-@mixin caret-right($size, $color) {
+@mixin caret-right($size, $color: null) {
 	@include caret-base;
 	border-left: $size solid $color;
 	border-top: $size solid transparent;
