@@ -1,0 +1,17 @@
+$duration: 0.7s;
+
+[data-animation] {
+	opacity: 0;
+}
+
+.active {
+	[data-animation] {
+		opacity: 1;
+	}
+
+	@for $i from 0 through  20 {
+		[data-animation="#{$i}"] {
+			transition: all $duration ease-out ($duration * $i);
+		}
+	}
+}
