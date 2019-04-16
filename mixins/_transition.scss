@@ -1,7 +1,7 @@
 /* Include transition with vendor prefixes */
-@mixin transition ($params: all 0.2s ease-out 0.05s) {
-	-webkit-transition: $params;
-	-moz-transition: $params;
-	-o-transition: $params;
-	transition: $params;
+@mixin transition($params: all 0.2s ease-out 0.05s) {
+    -webkit-transition: $params;
+    -moz-transition: $params;
+    -o-transition: $params;
+    transition: $params;
 }

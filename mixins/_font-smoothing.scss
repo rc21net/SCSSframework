@@ -1,4 +1,4 @@
-﻿@mixin font-smoothing($webkit:antialiased,$moz-osx:grayscale){
-  -webkit-font-smoothing: $webkit;
-  -moz-osx-font-smoothing: $moz-osx;
+﻿@mixin font-smoothing($webkit:antialiased,$moz-osx:grayscale) {
+    -webkit-font-smoothing: $webkit;
+    -moz-osx-font-smoothing: $moz-osx;
 }

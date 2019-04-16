@@ -1,88 +1,98 @@
 // sm only
 .clear-sm {
-	@include tabletOnly {
-		clear: both;
-	}
+    @include tabletOnly {
+        clear: both;
+    }
 }
+
 .clear-left-sm {
-	@include tabletOnly {
-		clear: left;
-	}
+    @include tabletOnly {
+        clear: left;
+    }
 }
+
 .clear-right-sm {
-	@include tabletOnly {
-		clear: right;
-	}
+    @include tabletOnly {
+        clear: right;
+    }
 }
 
 
 //sm and up
 .clear-sm-up {
-	@include tabletAndUp {
-		clear: both;
-	}
+    @include tabletAndUp {
+        clear: both;
+    }
 }
+
 .clear-left-sm-up {
-	@include tabletAndUp {
-		clear: left;
-	}
+    @include tabletAndUp {
+        clear: left;
+    }
 }
+
 .clear-right-sm-up {
-	@include tabletAndUp {
-		clear: right;
-	}
+    @include tabletAndUp {
+        clear: right;
+    }
 }
 
 
 // md only
 .clear-md {
-	@include desktopOnly {
-		clear: both;
-	}
+    @include desktopOnly {
+        clear: both;
+    }
 }
+
 .clear-left-md {
-	@include desktopOnly {
-		clear: left;
-	}
+    @include desktopOnly {
+        clear: left;
+    }
 }
+
 .clear-right-md {
-	@include desktopOnly {
-		clear: right;
-	}
+    @include desktopOnly {
+        clear: right;
+    }
 }
 
 
 // md and up
 .clear-md-up {
-	@include desktopAndUp {
-		clear: both;
-	}
+    @include desktopAndUp {
+        clear: both;
+    }
 }
+
 .clear-left-md-up {
-	@include desktopAndUp {
-		clear: left;
-	}
+    @include desktopAndUp {
+        clear: left;
+    }
 }
+
 .clear-right-md-up {
-	@include desktopAndUp {
-		clear: right;
-	}
+    @include desktopAndUp {
+        clear: right;
+    }
 }
 
 
 // lg
 .clear-lg {
-	@include largeAndUp {
-		clear: both;
-	}
+    @include largeAndUp {
+        clear: both;
+    }
 }
+
 .clear-left-lg {
-	@include largeAndUp {
-		clear: left;
-	}
+    @include largeAndUp {
+        clear: left;
+    }
 }
+
 .clear-right-lg {
-	@include largeAndUp {
-		clear: right;
-	}
+    @include largeAndUp {
+        clear: right;
+    }
 }

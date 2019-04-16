@@ -1,53 +1,53 @@
 @mixin tabletAndUp {
-	@media (min-width: $screen-sm-min) {
-		@content;
-	}
+    @media (min-width: $screen-sm-min) {
+        @content;
+    }
 }
 
 @mixin desktopAndUp {
-	@media (min-width: $screen-md-min) {
-		@content;
-	}
+    @media (min-width: $screen-md-min) {
+        @content;
+    }
 }
 
 @mixin largeAndUp {
-	@media (min-width: $screen-lg-min) {
-		@content;
-	}
+    @media (min-width: $screen-lg-min) {
+        @content;
+    }
 }
 
 @mixin phoneOnly {
-	@media (max-width: $screen-xs-max) {
-		@content;
-	}
+    @media (max-width: $screen-xs-max) {
+        @content;
+    }
 }
 
 @mixin phoneAndTabletOnly {
     @media (max-width: $screen-sm-max) {
-		@content;
-	}
+        @content;
+    }
 }
 
 @mixin tabletOnly {
-	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-		@content;
-	}
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        @content;
+    }
 }
 
 @mixin desktopOnly {
-	@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-		@content;
-	}
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        @content;
+    }
 }
 
 @mixin widthAndUp($width) {
-	@media (min-width: $width) {
-		@content;
-	}
+    @media (min-width: $width) {
+        @content;
+    }
 }
 
 @mixin widthOnly($from, $to) {
-	@media (min-width: $from) and (max-width: $to) {
-		@content;
-	}
+    @media (min-width: $from) and (max-width: $to) {
+        @content;
+    }
 }

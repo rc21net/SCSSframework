@@ -1,10 +1,9 @@
 /* Return percent size */
 @function percentSize($size, $parentSize) {
-	@return $size / $parentSize * 100%;
+    @return $size / $parentSize * 100%;
 }
 
 /* Return Block height for elements with text-overflow */
-@function blockHeight($lines-to-show, $font-size: $rembaseContent, $line-height: $line-height-ratio-base)
-{
-	@return $font-size * $line-height * $lines-to-show;
+@function blockHeight($lines-to-show, $font-size: $rembaseContent, $line-height: $line-height-ratio-base) {
+    @return $font-size * $line-height * $lines-to-show;
 }

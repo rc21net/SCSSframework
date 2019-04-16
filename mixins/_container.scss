@@ -1,75 +1,76 @@
 @mixin container($gutter: $grid-gutter-width) {
-	box-sizing: border-box;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left:  floor(($gutter / 2));
-	padding-right: ceil(($gutter / 2));
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: floor(($gutter / 2));
+    padding-right: ceil(($gutter / 2));
 }
+
 @mixin clear-container {
-	margin-left: 0;
-	margin-right: 0;
-	padding-left: 0;
-	padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 @mixin container-sm-md-lg {
-	@include tabletAndUp {
-		width: $container-sm;
-	}
+    @include tabletAndUp {
+        width: $container-sm;
+    }
 
-	@include desktopAndUp {
-		width: $container-md;
-	}
+    @include desktopAndUp {
+        width: $container-md;
+    }
 
-	@include largeAndUp {
-		width: $container-lg;
-	}
+    @include largeAndUp {
+        width: $container-lg;
+    }
 }
 
 @mixin container-sm {
-	@include tabletAndUp {
-		width: $container-sm;
-	}
+    @include tabletAndUp {
+        width: $container-sm;
+    }
 }
 
 @mixin container-md {
-	@include desktopAndUp {
-		width: $container-md;
-	}
+    @include desktopAndUp {
+        width: $container-md;
+    }
 }
 
 @mixin container-lg {
-	@include largeAndUp {
-		width: $container-lg;
-	}
+    @include largeAndUp {
+        width: $container-lg;
+    }
 }
 
 @mixin container-sm-md {
-	@include tabletAndUp {
-		width: $container-sm;
-	}
+    @include tabletAndUp {
+        width: $container-sm;
+    }
 
-	@include desktopAndUp {
-		width: $container-md;
-	}
+    @include desktopAndUp {
+        width: $container-md;
+    }
 }
 
 @mixin container-sm-lg {
-	@include tabletAndUp {
-		width: $container-sm;
-	}
+    @include tabletAndUp {
+        width: $container-sm;
+    }
 
-	@include largeAndUp {
-		width: $container-lg;
-	}
+    @include largeAndUp {
+        width: $container-lg;
+    }
 }
 
 @mixin container-md-lg {
-	@include desktopAndUp {
-		width: $container-md;
-	}
+    @include desktopAndUp {
+        width: $container-md;
+    }
 
-	@include largeAndUp {
-		width: $container-lg;
-	}
+    @include largeAndUp {
+        width: $container-lg;
+    }
 }

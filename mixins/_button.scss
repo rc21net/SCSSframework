@@ -1,4 +1,3 @@
-
 // Можно задать map со всеми цветами кнопок, например:
 // $button-colors: (
 // 		colorName: (
@@ -17,28 +16,28 @@
 
 // служебные
 @mixin _buttonState($colors, $state) {
-	$color: map_get($colors, 'color');
-	$background: map_get($colors, 'background');
-	$border: map_get($colors, 'border');
+    $color: map_get($colors, 'color');
+    $background: map_get($colors, 'background');
+    $border: map_get($colors, 'border');
 
-	color: map-get($color, $state) !important;
-	background-color: map-get($background, $state) !important;
-	border-color: map-get($border, $state) !important;
+    color: map-get($color, $state) !important;
+    background-color: map-get($background, $state) !important;
+    border-color: map-get($border, $state) !important;
 }
 
 // Общий стиль кнопок
 @mixin buttonType($font-face, $uppercase: false, $transition: none) {
-	display: inline-block;
-	box-sizing: border-box;
-	font-family: $font-face;
-	@if $uppercase {
-		text-transform: uppercase;
-	}
-	@include transition($transition);
-	&:hover {
-		text-decoration: none;
-		cursor: pointer;
-	}
+    display: inline-block;
+    box-sizing: border-box;
+    font-family: $font-face;
+    @if $uppercase {
+        text-transform: uppercase;
+    }
+    @include transition($transition);
+    &:hover {
+        text-decoration: none;
+        cursor: pointer;
+    }
 }
 
 // Варианты расцветок
@@ -50,36 +49,36 @@
 // 	border: (default: $black, hover: $black, active: $black)
 // );
 @mixin buttonColor($colors) {
-	@include _buttonState($colors, 'default');
+    @include _buttonState($colors, 'default');
 
-	&:hover,
-	&:focus,
-	&.focus {
-		@include _buttonState($colors, 'hover');
-	}
-	&:active,
-	&.active {
-		@include _buttonState($colors, 'active');
-	}
-	&.disabled,
-	&[disabled] {
-		&,
-		&:hover,
-		&:focus,
-		&.focus,
-		&:active,
-		&.active {
-			@include _buttonState($colors, 'default');
-		}
-	}
+    &:hover,
+    &:focus,
+    &.focus {
+        @include _buttonState($colors, 'hover');
+    }
+    &:active,
+    &.active {
+        @include _buttonState($colors, 'active');
+    }
+    &.disabled,
+    &[disabled] {
+        &,
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            @include _buttonState($colors, 'default');
+        }
+    }
 }
 
 // Варианты размеров
 @mixin buttonSize($height, $padding-horizontal, $font-size: $btn-font-size-base, $border-radius: $btn-border-radius-base, $border-size: $btn-border-size-base) {
-	height: $height !important;
-	line-height: $height - $border-size * 2 !important;
-	padding: 0 $padding-horizontal !important;
-	font-size: $font-size !important;
-	border: $border-size solid !important;
-	border-radius: $border-radius !important;
+    height: $height !important;
+    line-height: $height - $border-size * 2 !important;
+    padding: 0 $padding-horizontal !important;
+    font-size: $font-size !important;
+    border: $border-size solid !important;
+    border-radius: $border-radius !important;
 }

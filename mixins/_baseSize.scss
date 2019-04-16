@@ -3,5 +3,5 @@
 ************************/
 
 @function baseSizeX($x: 1) {
-	@return $baseSize * $x;
+    @return $baseSize * $x;
 }

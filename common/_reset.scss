@@ -1,9 +1,10 @@
 /* RESET */
 html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
+
 html,
 body,
 div,
@@ -85,208 +86,254 @@ time,
 mark,
 audio,
 video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-	outline: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    outline: none;
 }
-article, 
-aside, 
-details, 
-figcaption, 
-figure, 
-footer, 
-header, 
-hgroup, 
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
 main,
-menu, 
-nav, 
+menu,
+nav,
 section,
 summary {
-	display: block;
+    display: block;
 }
+
 audio,
 canvas,
 progress,
 video {
-  display: inline-block;
-  vertical-align: baseline;
+    display: inline-block;
+    vertical-align: baseline;
 }
+
 audio:not([controls]) {
-  display: none;
-  height: 0;
+    display: none;
+    height: 0;
 }
+
 [hidden],
 template {
-  display: none;
+    display: none;
 }
-// TODO: сомнительно
+
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
+
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
+
 blockquote:before, blockquote:after, q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
+
 caption, th, td {
-	font-weight: 600;
-	text-align: left;
+    font-weight: 600;
+    text-align: left;
 }
 
 del {
-	color: #333;
+    color: #333;
 }
+
 ins {
-	background: #fff9c0;
-	text-decoration: none;
+    background: #fff9c0;
+    text-decoration: none;
 }
+
 hr {
-	box-sizing: content-box;
-	height: 0;
+    box-sizing: content-box;
+    height: 0;
 }
+
 sub,
 sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
 }
+
 sup {
-	top: -0.5em;
+    top: -0.5em;
 }
+
 sub {
-	bottom: -0.25em;
+    bottom: -0.25em;
 }
+
 small {
-	font-size: 80%;
+    font-size: 80%;
 }
+
 mark {
-	background: #ff0;
-	color: #000;
+    background: #ff0;
+    color: #000;
 }
+
 pre {
-	overflow: auto;
+    overflow: auto;
 }
+
 code,
 kbd,
 pre,
 samp {
-	font-family: monospace, monospace;
-	font-size: 1em;
+    font-family: monospace, monospace;
+    font-size: 1em;
 }
+
 a, a:active, a:focus, a:visited {
-	text-decoration: none;
-	outline: none;
-	border: none;
-	background-color: transparent;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
 }
-::-moz-focus-inner { padding: 0; border: 0 }
+
+::-moz-focus-inner {
+    padding: 0;
+    border: 0
+}
+
 :focus {
-	-moz-outline-style: none;
+    -moz-outline-style: none;
 }
+
 :-moz-any-link:focus {
-	outline: 1px dotted invert;
+    outline: 1px dotted invert;
 }
+
 :-moz-any-link:focus {
-	outline: none;
+    outline: none;
 }
+
 strong, b {
-	font-weight: 600;
+    font-weight: 600;
 }
+
 em {
-	font-style: italic;
+    font-style: italic;
 }
-input, button, select, textarea  {
-	outline: none;
-	background: none;
-	border: none;
-	padding: 0;
-	text-align: left;
-	box-shadow: none;
+
+input, button, select, textarea {
+    outline: none;
+    background: none;
+    border: none;
+    padding: 0;
+    text-align: left;
+    box-shadow: none;
 
 }
+
 button,
 input,
 optgroup,
 select,
 textarea {
-	color: inherit;
-	font: inherit;
-	margin: 0;
+    color: inherit;
+    font: inherit;
+    margin: 0;
 }
+
 button {
-	overflow: visible;
+    overflow: visible;
 }
+
 button,
 select {
-	text-transform: none;
+    text-transform: none;
 }
+
 textarea {
-	overflow: auto;
+    overflow: auto;
 }
+
 optgroup {
-	font-weight: bold;
+    font-weight: bold;
 }
+
 button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	-webkit-appearance: button;
-	cursor: pointer;
+    -webkit-appearance: button;
+    cursor: pointer;
 }
+
 input {
-	line-height: normal;
+    line-height: normal;
 }
+
 button[disabled],
 html input[disabled] {
-	cursor: default;
+    cursor: default;
 }
+
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-	border: 0;
-	padding: 0;
+    border: 0;
+    padding: 0;
 }
+
 input::-ms-clear {
-	display: none;
+    display: none;
 }
+
 input::-ms-reveal {
-	display: none;
+    display: none;
 }
+
 input[type="checkbox"],
 input[type="radio"] {
-	box-sizing: border-box;
-	padding: 0;
+    box-sizing: border-box;
+    padding: 0;
 }
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-	height: auto;
+    height: auto;
 }
+
 input[type="search"] {
-	-webkit-appearance: textfield;
-	box-sizing: content-box;
+    -webkit-appearance: textfield;
+    box-sizing: content-box;
 }
+
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-	-webkit-appearance: none;
+    -webkit-appearance: none;
 }
+
 img {
-	border: 0;
-	max-width: 100%;
-	vertical-align: middle;
+    border: 0;
+    max-width: 100%;
+    vertical-align: middle;
 }
+
 iframe {
-	display: block;
+    display: block;
 }
+
 svg:not(:root) {
-	overflow: hidden;
+    overflow: hidden;
 }

@@ -1,21 +1,45 @@
+$grid-breakpoints: (
+    // Extra small screen / phone
+    xs: 0,
+    // Small screen / phone
+    sm: 576px,
+    // Medium screen / tablet
+    md: 768px,
+    // Large screen / desktop
+    lg: 992px,
+    // Extra large screen / wide desktop
+    xl: 1200px
+) !default;
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px
+) !default;
+
 // Breakpoints
-$screen-sm-min: 768px !default;
-$screen-md-min: 992px !default;
-$screen-lg-min: 1200px !default;
-$screen-xs-max: ($screen-sm-min - 1) !default;
-$screen-sm-max: ($screen-md-min - 1) !default;
-$screen-md-max: ($screen-lg-min - 1) !default;
+$screen-xs-min: map_get($grid-breakpoints, xs);
+$screen-xs-max: (map_get($grid-breakpoints, sm) - 1);
+$screen-sm-min: map_get($grid-breakpoints, sm);
+$screen-sm-max: (map_get($grid-breakpoints, md) - 1);
+$screen-md-min: map_get($grid-breakpoints, md);
+$screen-md-max: (map_get($grid-breakpoints, lg) - 1);
+$screen-lg-min: map_get($grid-breakpoints, lg);
+$screen-lg-max: (map_get($grid-breakpoints, xl) - 1);
+$screen-xs-min: map_get($grid-breakpoints, xl);
 
 // gutter
 $grid-gutter-width: 30px !default;
 
 //container
-$container-sm: (720px + $grid-gutter-width) !default;
-$container-md: (940px + $grid-gutter-width) !default;
-$container-lg: (1140px + $grid-gutter-width) !default;
+$container-sm: (map_get($container-max-widths, sm) + $grid-gutter-width) !default;
+$container-md: (map_get($container-max-widths, md) + $grid-gutter-width) !default;
+$container-lg: (map_get($container-max-widths, lg) + $grid-gutter-width) !default;
+$container-xl: (map_get($container-max-widths, xl) + $grid-gutter-width) !default;
 
 // шаг сетки
-$baseSize: 11px !default;
+$baseSize: 10px !default;
 
 // button
 $btn-font-size-base: 16px !default;
