@@ -13,64 +13,44 @@
     padding-right: 0;
 }
 
-@mixin container-sm-md-lg {
-    @include tabletAndUp {
+@mixin container-responsive-width {
+    @include sm-and-up {
         width: $container-sm;
     }
 
-    @include desktopAndUp {
+    @include md-and-up {
         width: $container-md;
     }
 
-    @include largeAndUp {
+    @include lg-and-up {
         width: $container-lg;
+    }
+
+    @include xl-and-up {
+        width: $container-xl;
     }
 }
 
-@mixin container-sm {
-    @include tabletAndUp {
+@mixin container-responsive-width-sm-only {
+    @include sm-and-up {
         width: $container-sm;
     }
 }
 
-@mixin container-md {
-    @include desktopAndUp {
-        width: $container-md;
-    }
-}
-
-@mixin container-lg {
-    @include largeAndUp {
-        width: $container-lg;
-    }
-}
-
-@mixin container-sm-md {
-    @include tabletAndUp {
-        width: $container-sm;
-    }
-
-    @include desktopAndUp {
+@mixin container-responsive-width-md-only {
+    @include md-and-up {
         width: $container-md;
     }
 }
 
-@mixin container-sm-lg {
-    @include tabletAndUp {
-        width: $container-sm;
-    }
-
-    @include largeAndUp {
+@mixin container-responsive-width-lg-only {
+    @include lg-and-up {
         width: $container-lg;
     }
 }
 
-@mixin container-md-lg {
-    @include desktopAndUp {
-        width: $container-md;
-    }
-
-    @include largeAndUp {
-        width: $container-lg;
+@mixin container-responsive-width-xl-only {
+    @include xl-and-up {
+        width: $container-xl;
     }
 }

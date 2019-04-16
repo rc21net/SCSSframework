@@ -1,52 +1,70 @@
-@mixin tabletAndUp {
+@mixin sm-and-up {
     @media (min-width: $screen-sm-min) {
         @content;
     }
 }
 
-@mixin desktopAndUp {
+@mixin md-and-up {
     @media (min-width: $screen-md-min) {
         @content;
     }
 }
 
-@mixin largeAndUp {
+@mixin lg-and-up {
     @media (min-width: $screen-lg-min) {
         @content;
     }
 }
 
-@mixin phoneOnly {
+@mixin xl-and-up {
+    @media (min-width: $screen-lg-min) {
+        @content;
+    }
+}
+
+@mixin xs-only {
     @media (max-width: $screen-xs-max) {
         @content;
     }
 }
 
-@mixin phoneAndTabletOnly {
-    @media (max-width: $screen-sm-max) {
-        @content;
-    }
-}
-
-@mixin tabletOnly {
+@mixin sm-only {
     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
         @content;
     }
 }
 
-@mixin desktopOnly {
+@mixin md-only {
     @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
         @content;
     }
 }
 
-@mixin widthAndUp($width) {
+@mixin lg-only {
+    @media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+        @content;
+    }
+}
+
+@mixin xs-sm-only {
+    @media (max-width: $screen-sm-max) {
+        @content;
+    }
+}
+
+@mixin xs-sm-md-only {
+    @media (max-width: $screen-md-max) {
+        @content;
+    }
+}
+
+@mixin width-and-up($width) {
     @media (min-width: $width) {
         @content;
     }
 }
 
-@mixin widthOnly($from, $to) {
+@mixin width-only($from, $to) {
     @media (min-width: $from) and (max-width: $to) {
         @content;
     }
