@@ -17,7 +17,7 @@
 }
 
 @mixin xl-and-up {
-    @media (min-width: $screen-lg-min) {
+    @media (min-width: $screen-xl-min) {
         @content;
     }
 }

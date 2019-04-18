@@ -27,7 +27,7 @@ $screen-md-min: map_get($grid-breakpoints, md);
 $screen-md-max: (map_get($grid-breakpoints, lg) - 1);
 $screen-lg-min: map_get($grid-breakpoints, lg);
 $screen-lg-max: (map_get($grid-breakpoints, xl) - 1);
-$screen-xs-min: map_get($grid-breakpoints, xl);
+$screen-xl-min: map_get($grid-breakpoints, xl);
 
 // gutter
 $grid-gutter-width: 30px !default;
