@@ -4,8 +4,8 @@
 }
 
 @mixin grid-container-with-gutter($gutter: $grid-gutter-width) {
-    margin-left: floor(($gutter / 2));
-    margin-right: ceil(($gutter / 2));
+    margin-left: floor((-$gutter / 2));
+    margin-right: ceil((-$gutter / 2));
 }
 
 @mixin cell-equal {
@@ -17,6 +17,7 @@
 @mixin cell-with-gutter($gutter: $grid-gutter-width) {
     padding-left: floor(($gutter / 2));
     padding-right: ceil(($gutter / 2));
+    box-sizing: border-box;
 }
 
 @mixin cell-one-of($part-of-width) {
