@@ -1,0 +1,35 @@
+.container {
+    @include container();
+    @include container-responsive-width;
+}
+
+.container_lg {
+    @include container-responsive-width-lg-only;
+    @include container-responsive-width-xl-only;
+    @include lg-and-up {
+        @include container();
+    }
+}
+
+.container_xs-md {
+    @include container-responsive-width-sm-only;
+    @include container-responsive-width-md-only;
+    @include container();
+    @include lg-and-up {
+        @include clear-container();
+        width: auto;
+    }
+}
+
+.full-height-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .layout-main {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+}
+

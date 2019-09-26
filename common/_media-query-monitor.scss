@@ -1,0 +1,28 @@
+.media-query-monitor {
+    position: fixed;
+    background: rgba(255,255,255,0.7);
+    color: #444;
+    border: 1px solid #444444;
+    border-radius: 5px;
+    top: 66px;
+    left: 22px;
+    padding: 11px;
+    text-transform: uppercase;
+    @include typography__description;
+
+    &:before {
+        content: 'xs';
+        @include sm-and-up {
+            content: 'sm'
+        }
+        @include md-and-up {
+            content: 'md';
+        }
+        @include lg-and-up {
+            content: 'lg';
+        }
+        @include xl-and-up {
+            content: 'xl';
+        }
+    }
+}

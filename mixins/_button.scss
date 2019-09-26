@@ -1,17 +1,42 @@
+@mixin a-button {
+    &, &:active, &:focus, &:visited, &:hover {
+        text-decoration: none;
+        @content;
+    }
+}
+
+@mixin button__size($height, $padding, $border-width, $border-radius) {
+    @include a-button {
+        height: $height;
+        width: auto;
+        box-sizing: border-box;
+        padding: $padding;
+        border: solid $border-width transparent;
+        border-radius: $border-radius;
+        text-align: center;
+        display: inline-block;
+        white-space: nowrap;
+    }
+}
+
+/* deprecated
+ * старые кнопки
+ */
+
 // Можно задать map со всеми цветами кнопок, например:
 // $button-colors: (
-// 		colorName: (
-// 				color: (default: $white, hover: $white, active: $white),
-// 				background: (default: $orange, hover: $orange, active: $orange),
-// 				border: (default: $black, hover: $black, active: $black)
-// 		),
-// 		...
+//      colorName: (
+//          color: (default: $white, hover: $white, active: $white),
+//          background: (default: $orange, hover: $orange, active: $orange),
+//          border: (default: $black, hover: $black, active: $black)
+//      ),
+//  ...
 // );
 // Потом запустить цикл:
 // @each $color, $map in $button-colors {
-// 	.button-#{$color} {
-// 		@include buttonColor($map);
-// 	}
+//      .button-#{$color} {
+//          @include buttonColor($map);
+//      }
 // }
 
 // служебные
@@ -44,9 +69,9 @@
 //
 // $colors - map, пример:
 // $color: (
-// 	color: (default: $white, hover: $white, active: $white),
-// 	background: (default: $orange, hover: $orange, active: $orange),
-// 	border: (default: $black, hover: $black, active: $black)
+//      color: (default: $white, hover: $white, active: $white),
+//      background: (default: $orange, hover: $orange, active: $orange),
+//      border: (default: $black, hover: $black, active: $black)
 // );
 @mixin buttonColor($colors) {
     @include _buttonState($colors, 'default');

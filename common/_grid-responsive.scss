@@ -1,0 +1,225 @@
+@mixin grid-container-with-vertical-gutter($gutter: $grid-gutter-width) {
+    margin-top: floor((-$gutter / 2));
+    margin-bottom: ceil((-$gutter / 2));
+}
+
+@mixin cell-with-vertical-gutter($gutter: $grid-gutter-width) {
+    padding-top: floor(($gutter / 2));
+    padding-bottom: ceil(($gutter / 2));
+    box-sizing: border-box;
+}
+
+%grid-flow {
+    @include grid-container;
+    @include grid-container-with-gutter();
+
+    @include grid-container-with-vertical-gutter();
+}
+
+%cell {
+    @include cell-with-gutter();
+    @include cell-with-vertical-gutter();
+}
+
+.grid-flow {
+    @extend %grid-flow;
+
+    // TODO: не использую, не удобно
+    /**
+     * Ширина в классе ячейки
+     * <div class="grid-flow">
+     *     <div class="cell-xs-1 cell-md-3"></div>
+     *     <div class="cell-xs-1 cell-md-3"></div>
+     * </div>
+     */
+    .cell {
+        @each $number in 1 2 3 4 {
+            &-xs_#{$number} {
+                @extend %cell;
+                @include cell-one-of($number);
+            }
+
+            &-sm_#{$number} {
+                @extend %cell;
+                @include sm-and-up {
+                    @include cell-one-of($number);
+                }
+            }
+
+            &-md_#{$number} {
+                @extend %cell;
+                @include md-and-up {
+                    @include cell-one-of($number);
+                }
+            }
+
+            &-lg_#{$number} {
+                @extend %cell;
+                @include lg-and-up {
+                    @include cell-one-of($number);
+                }
+            }
+
+            &-xl_#{$number} {
+                @extend %cell;
+                @include xl-and-up {
+                    @include cell-one-of($number);
+                }
+            }
+        }
+    }
+
+    /**
+     * Ширина в классе потока
+     * <div class="grid-flow-xs-1 grid-flow-md-3">
+     *     <div class="cell"></div>
+     *     <div class="cell"></div>
+     * </div>
+     */
+    @each $number in 1 2 3 4 {
+        &-xs_#{$number} {
+            @extend %grid-flow;
+
+            .cell {
+                @extend %cell;
+                @include cell-one-of($number);
+            }
+        }
+
+        &-sm_#{$number} {
+            @extend %grid-flow;
+
+            .cell {
+                @extend %cell;
+                @include sm-and-up {
+                    @include cell-one-of($number);
+                }
+            }
+        }
+
+        &-md_#{$number} {
+            @extend %grid-flow;
+
+            .cell {
+                @extend %cell;
+                @include md-and-up {
+                    @include cell-one-of($number);
+                }
+            }
+        }
+
+        &-lg_#{$number} {
+            @extend %grid-flow;
+
+            .cell {
+                @extend %cell;
+                @include lg-and-up {
+                    @include cell-one-of($number);
+                }
+            }
+        }
+
+        &-xl_#{$number} {
+            @extend %grid-flow;
+
+            .cell {
+                @extend %cell;
+                @include xl-and-up {
+                    @include cell-one-of($number);
+                }
+            }
+        }
+    }
+}
+
+.grid-flow-vertical-gutter_0 {
+    @include grid-container-with-vertical-gutter(0);
+
+    .cell {
+        @include cell-with-vertical-gutter(0);
+    }
+}
+
+.grid-flow-vertical-gutter_15 {
+    @include grid-container-with-vertical-gutter(15px);
+
+    .cell {
+        @include cell-with-vertical-gutter(15px);
+    }
+}
+
+// 30px - default
+
+.grid-flow-vertical-gutter_50 {
+    @include grid-container-with-vertical-gutter(50px);
+
+    .cell {
+        @include cell-with-vertical-gutter(50px);
+    }
+}
+
+@mixin grid-slider {
+    overflow: hidden;
+    padding: 25px 15px;
+    margin: -25px -15px;
+
+    .grid-slider__flow {
+        flex-wrap: nowrap;
+        transition: transform .6s ease-in-out;
+    }
+
+    .cell {
+        flex-shrink: 0;
+    }
+
+    .carousel-indicators {
+        display: flex;
+    }
+}
+
+.grid-slider {
+    .carousel-indicators {
+        margin-top: 24px;
+        display: none;
+    }
+
+    &_xs {
+        @extend .grid-slider;
+
+        @include xs-only {
+            @include grid-slider;
+        }
+    }
+
+    &_sm {
+        @extend .grid-slider;
+
+        @include sm-only {
+            @include grid-slider;
+        }
+    }
+
+    &_md {
+        @extend .grid-slider;
+
+        @include md-only {
+            @include grid-slider;
+        }
+    }
+
+    &_xs_sm {
+        @extend .grid-slider;
+
+        @include xs-sm-only {
+            @include grid-slider;
+        }
+    }
+
+    &_xs_sm_md {
+        @extend .grid-slider;
+
+        @include xs-sm-md-only {
+            @include grid-slider;
+        }
+    }
+}
