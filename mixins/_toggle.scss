@@ -1,5 +1,5 @@
 @mixin toggle($barColor, $barColorHover, $width, $height, $barHeight) {
-	$barMargin: ($height - $barHeight * 3) / 2;
+	$barMargin: ($height - $barHeight * 3) * .5;
 
 	$middleBarTop: $barHeight + $barMargin;
 	$middleBarBottom: $middleBarTop + $barHeight;

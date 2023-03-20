@@ -1,6 +1,8 @@
+@use "sass:math";
+
 /* Return percent size */
 @function percentSize($size, $parentSize) {
-	@return $size / $parentSize * 100%;
+	@return math.div($size, $parentSize) * 100%;
 }
 
 /* Return Block height for elements with text-overflow */

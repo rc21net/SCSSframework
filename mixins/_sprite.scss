@@ -1,3 +1,5 @@
+@use "sass:math";
+
 /*
 $sprites: (
 	interface: (
@@ -59,7 +61,7 @@ $sprites: null !default;
 	$items: map-get($spriteMap, items);
 	$image: map-get($items, $imageName);
 	$w: map-get($image, width);
-	$ratio: $width / $w;
+	$ratio: math.div($width, $w);
 
 	@include sprite-scale-to-ratio($spriteName, $imageName, $ratio)
 }
@@ -69,7 +71,7 @@ $sprites: null !default;
 	$items: map-get($spriteMap, items);
 	$image: map-get($items, $imageName);
 	$h: map-get($image, height);
-	$ratio: $height / $h;
+	$ratio: math.div($height, $h);
 
 	@include sprite-scale-to-ratio($spriteName, $imageName, $ratio)
 }
@@ -113,7 +115,7 @@ $sprites: null !default;
 	$items: map-get($spriteMap, items);
 	$image: map-get($items, $imageName);
 	$w: map-get($image, width);
-	$ratio: $width / $w;
+	$ratio: math.div($width, $w);
 
 	@include sprite-svg-fragment-scale-to-ratio($spriteName, $imageName, $ratio)
 }
@@ -123,7 +125,7 @@ $sprites: null !default;
 	$items: map-get($spriteMap, items);
 	$image: map-get($items, $imageName);
 	$h: map-get($image, height);
-	$ratio: $height / $h;
+	$ratio: math.div($height, $h);
 
 	@include sprite-svg-fragment-scale-to-ratio($spriteName, $imageName, $ratio)
 }

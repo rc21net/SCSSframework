@@ -2,8 +2,8 @@
 	box-sizing: border-box;
 	margin-left: auto;
 	margin-right: auto;
-	padding-left:  floor(($gutter / 2));
-	padding-right: ceil(($gutter / 2));
+	padding-left:  floor(($gutter * .5));
+	padding-right: ceil(($gutter * .5));
 }
 @mixin clear-container {
 	margin-left: 0;

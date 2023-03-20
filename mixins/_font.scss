@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // TODO: доработать, не очень удобно
 
 @function getPropertyOrNull($map, $propertyName) {
@@ -28,7 +30,7 @@ $fonts: (
 
 	$font-family: map_get($fontMap, font-family);
 	$font-size: map_get($fontMap, font-size);
-	$font-size-rem: ($font-size / $rembase) + rem;
+	$font-size-rem: math.div($font-size, $rembase) + rem;
 	$line-height: map_get($fontMap, line-height);
 	$color: map_get($fontMap, color);
 
@@ -50,7 +52,7 @@ $fonts: (
 /* Include font-size in rem and pixels (for ie) */
 @mixin font-size ($size: $rembase) {
 	font-size: $size;
-	font-size: ($size / $rembase) + rem;
+	font-size: math.div($size, $rembase) + rem;
 }
 /* Include font-size and line-height (both in rem and pixels) */
 @mixin font-line-size ($size: $rembase, $ratio: $line-height-ratio-base) {
